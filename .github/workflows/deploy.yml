@@ -1,0 +1,11 @@
+name: Deploy Docker Sample one
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-workflow-passing-data:
+    uses: kumvijaya/docker-release-workflow/.github/workflows/deploy-docker.yml@main
+    with:
+      release_description: Deploy docker sample one
+    secrets: inherit
