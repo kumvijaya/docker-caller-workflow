@@ -2,10 +2,31 @@ name: Deploy Docker Sample one
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        type: string
+        required: false
+        description: Version
+      create_release:
+        type: boolean
+        required: false
+        description: Create github release
+      release_description:
+        type: string
+        required: false
+        description: Github release description
+        default: Release related info       
+      docker_tag:
+        type: string
+        required: false
+        description: Docker tag
+        default: vkumar2/docker-app
 
 jobs:
   call-workflow-passing-data:
     uses: kumvijaya/docker-release-workflow/.github/workflows/deploy-docker.yml@main
     with:
-      release_description: Deploy docker sample one
+      version: ${{ inputs.version }}
+      create_release: ${{ inputs.create_release }}
+      release_description: ${{ inputs.release_description }}
     secrets: inherit
