@@ -24,6 +24,7 @@ on:
 
 jobs:
   call-workflow-passing-data:
+    permissions: write-all
     uses: kumvijaya/docker-release-workflow/.github/workflows/deploy-docker.yml@main
     with:
       version: ${{ inputs.version }}
