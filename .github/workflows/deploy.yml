@@ -15,7 +15,7 @@ on:
         type: string
         required: false
         description: Github release description
-        default: Release related info       
+        default: Docker sample one deployment      
       docker_tag:
         type: string
         required: false
@@ -30,4 +30,5 @@ jobs:
       version: ${{ inputs.version }}
       create_release: ${{ inputs.create_release }}
       release_description: ${{ inputs.release_description }}
+      docker_tag: ${{ inputs.docker_tag }}
     secrets: inherit
