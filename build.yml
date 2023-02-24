@@ -1,4 +1,3 @@
-
 - file: Dockerfile
   targetImage: vkumar2/docker-app
 - file: src/AppDockerfile
