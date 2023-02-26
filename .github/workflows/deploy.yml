@@ -11,11 +11,6 @@ on:
         type: boolean
         required: false
         description: Create github release
-      release_description:
-        type: string
-        required: false
-        description: Github release description
-        default: Docker sample one deployment
 
 jobs:
   call-workflow-passing-data:
@@ -24,5 +19,4 @@ jobs:
     with:
       version: ${{ inputs.version }}
       create_release: ${{ inputs.create_release }}
-      release_description: ${{ inputs.release_description }}
     secrets: inherit
