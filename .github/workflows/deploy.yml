@@ -15,12 +15,7 @@ on:
         type: string
         required: false
         description: Github release description
-        default: Docker sample one deployment      
-      docker_tag:
-        type: string
-        required: false
-        description: Docker tag
-        default: vkumar2/docker-app
+        default: Docker sample one deployment
 
 jobs:
   call-workflow-passing-data:
@@ -30,5 +25,4 @@ jobs:
       version: ${{ inputs.version }}
       create_release: ${{ inputs.create_release }}
       release_description: ${{ inputs.release_description }}
-      docker_tag: ${{ inputs.docker_tag }}
     secrets: inherit
