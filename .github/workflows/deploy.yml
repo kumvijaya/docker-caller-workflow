@@ -19,4 +19,5 @@ jobs:
     with:
       version: ${{ inputs.version }}
       create_release: ${{ inputs.create_release }}
+      build_images: Dockerfile=vkumar2/docker-app,src/AppDockerfile=vkumar2/test
     secrets: inherit
